@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Aura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1 id="heading">Paint Aura</h1>
+        <p id="heading-p">Color Your Words, Express Your Creativity</p>
+        <div id="paintbox" contenteditable="true">Type your text here........</div>
+          <br><br><br>
+        <button id="download-button">Download</button>
+        <br><br><br>
+        <div id="main">
+            <div id="first">
+                <h1>Choose Your Background Color</h1>
+                <div id="bg-color">
+                    <button onclick="BgColor('blue')" style="background-color: blue;"></button>
+                    <button onclick="BgColor('green')" style="background-color: green;"></button>
+                    <button onclick="BgColor('red')" style="background-color: red;"></button>
+                    <button onclick="BgColor('black')" style="background-color: black;"></button>
+                    <button onclick="BgColor('white')" style="background-color: white;"></button>
+                    <button onclick="BgColor('yellow')" style="background-color: yellow;"></button>
+                    <button onclick="BgColor('pink')" style="background-color: pink;"></button>
+                </div>
+            </div>
+            <div id="text-color">
+                <h1>Choose Your Text Color</h1>
+                <button onclick="TextColor('blue')" style="background-color: blue;"</button>
+                <button onclick="TextColor('green')" style="background-color:Green;"></button>
+                <button onclick="TextColor('red')" style="background-color:Red"></button>
+                <button onclick="TextColor('black')" style="background-color:Black;"></button>
+                <button onclick="TextColor('white')" style="background-color:White;"></button>
+                <button onclick="TextColor('yellow')" style="background-color:Yellow;"></button>
+                <button onclick="TextColor('pink')" style="background-color: Pink;"></button>
+            </div>
+        <div id="font-size">
+            <h1>Choose Your Font Size</h1>
+            <select onchange="FontSize(this.value)">
+                <option value="16px">16px</option>
+                <option value="20px">20px</option>
+                <option value="24px">24px</option>
+                <option value="30px">30px</option>
+                <option value="36px">36px</option>
+                <option value="48px">48px</option>
+                <option value="60px">60px</option>
+            </select>
+        </div>
+        <div id="font-family">
+                <h1>Choose Your Font Family</h1>
+                <select onchange="FontFamily(this.value)">
+                    <option value="Arial">Arial</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="cursive">Cursive</option>
+                     <option value="monospace">Monospace</option>
+                </select>
+            </div>
+        </div>
+    </center>
+    <script>
+        function BgColor(color) {
+            document.getElementById("paintbox").style.backgroundColor = color;
+        }
+        function TextColor(color) {
+            document.getElementById("paintbox").style.color = color;
+        }
+
+        function FontSize(size) {
+         document.getElementById("paintbox").style.fontSize = size;
+        }
+
+        function FontFamily(font) {
+         document.getElementById("paintbox").style.fontFamily = font;
+        }
+    </script>
+    
+</body>
+</html>

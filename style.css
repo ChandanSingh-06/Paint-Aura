@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow-x: hidden;
+    font-family: serif;
+    background: linear-gradient(
+        135deg,
+        #f8f5ff,
+        #eef5ff,
+        #fff1f7
+    );
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    min-height: 100vh;
+}
+#heading {
+    font-family: serif;
+    font-size: 70px;
+    color: rgb(115, 147, 7);
+    text-shadow: 2px 3px 5px black;
+    margin-bottom: 10px;
+    
+}
+
+#heading-p {
+    font-family: serif;
+    font-size: 25px;
+    color: #666;
+    text-shadow: 2px 3px 5px black;
+}
+#paintbox {
+    width: 100%;
+    max-width: 700px;
+    min-height: 500px;
+    height: auto;
+    padding: 15px;
+    border: 2px solid #ddd6fe;
+    border-radius: 15px;
+    display: block;
+    text-align:center;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+#download-button {
+    height: 50px;
+    width: 200px;
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: transparent;
+}
+
+#download-button:hover {
+    background-color: rgb(158, 209, 209);
+    color: white;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    border:1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+}
+#first,
+#text-color,
+#font-size,
+#font-family {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    max-width: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+#first h1,
+#text-color h1,
+#font-size h1,
+#font-family h1 {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    
+}
+#bg-color button,
+#text-color button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 3px;
+    transition: 0.3s ease;
+}
+
+#bg-color button:hover,
+#text-color button:hover {
+    transform: scale(1.15);
+}
+#font-size select,
+#font-family select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: white;
+    outline: none;
+}
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    #heading {
+        font-size: 50px;
+    }
+
+    #heading-p {
+        font-size: 20px;
+    }
+
+    #main {
+        gap: 20px;
+    }
+
+    #first,
+    #text-color,
+    #font-size,
+    #font-family {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #heading {
+        font-size: 38px;
+    }
+
+    #heading-p {
+        font-size: 17px;
+    }
+
+    #paintbox {
+        width: 100%;
+        min-height: 300px;
+        padding: 12px;
+    }
+
+    #download-button {
+        width: 100%;
+        max-width: 200px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    #main {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #first,
+    #text-color,
+    #font-size,
+    #font-family {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #first h1,
+    #text-color h1,
+    #font-size h1,
+    #font-family h1 {
+        font-size: 22px;
+    }
+
+    #bg-color button,
+    #text-color button {
+        width: 32px;
+        height: 32px;
+        margin: 3px;
+    }
+
+    #font-size select,
+    #font-family select {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
